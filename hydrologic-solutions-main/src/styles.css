@@ -1,0 +1,201 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-aqua: var(--aqua);
+  --color-aqua-foreground: var(--aqua-foreground);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Light: paper white with KGS deep indigo navy */
+  --background: oklch(0.985 0.004 270);
+  --foreground: oklch(0.22 0.16 268);
+  --surface: oklch(0.96 0.012 268);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.16 268);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.16 268);
+
+  --primary: oklch(0.24 0.18 268);
+  --primary-foreground: oklch(0.985 0.004 270);
+
+  --aqua: oklch(0.55 0.22 268);
+  --aqua-foreground: oklch(0.985 0.004 270);
+
+  --secondary: oklch(0.93 0.025 268);
+  --secondary-foreground: oklch(0.24 0.16 268);
+  --muted: oklch(0.94 0.018 268);
+  --muted-foreground: oklch(0.45 0.06 268);
+  --accent: oklch(0.88 0.07 268);
+  --accent-foreground: oklch(0.22 0.16 268);
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.88 0.02 268);
+  --input: oklch(0.9 0.02 268);
+  --ring: oklch(0.4 0.18 268);
+  --map-filter: none;
+}
+
+.dark {
+  /* Dark: KGS midnight indigo (#03045D renginizin birebir OKLCH karşılığı) */
+  --background: oklch(0.20 0.17 268);
+  --surface: oklch(0.24 0.15 268);
+
+  /* İçerideki diğer kartlar ve kutular için uyumlu koyu tonlar */
+  --card: oklch(0.25 0.14 268);
+  --card-foreground: oklch(0.97 0.005 270);
+  --popover: oklch(0.25 0.14 268);
+  --popover-foreground: oklch(0.97 0.005 270);
+
+  /* Yazılar ve ana elemanlar */
+  --foreground: oklch(0.97 0.005 270);
+  --primary: oklch(0.97 0.005 270);
+  --primary-foreground: oklch(0.20 0.17 268);
+
+  /* Canlı detay renginiz */
+  --aqua: oklch(0.75 0.18 268);
+  --aqua-foreground: oklch(0.20 0.17 268);
+
+  --secondary: oklch(0.28 0.12 268);
+  --secondary-foreground: oklch(0.97 0.005 270);
+  --muted: oklch(0.27 0.10 268);
+  --muted-foreground: oklch(0.72 0.04 268);
+  --accent: oklch(0.34 0.14 268);
+  --accent-foreground: oklch(0.97 0.005 270);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.32 0.10 268);
+  --input: oklch(0.3 0.10 268);
+  --ring: oklch(0.7 0.18 268);
+  --map-filter: invert(1);
+  
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .gradient-aqua {
+    background: linear-gradient(135deg, var(--aqua), var(--primary));
+  }
+  .grain-overlay::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--foreground) 10%, transparent) 1px, transparent 0);
+    background-size: 24px 24px;
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  .map-marker {
+    animation: map-marker-in 0.7s ease-out both;
+  }
+}
+
+@keyframes map-marker-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.65); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-marker { animation: none; }
+}
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .gradient-aqua {
+    background: linear-gradient(135deg, var(--aqua), var(--primary));
+  }
+  .grain-overlay::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--foreground) 10%, transparent) 1px, transparent 0);
+    background-size: 24px 24px;
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  .map-marker {
+    animation: map-marker-in 0.7s ease-out both;
+  }
+
+  /* 🎯 YENİ: Haritadan yukarı yükselen illerin süzülme animasyonu */
+  .animate-map-float {
+    animation: mapFloat 4s ease-in-out infinite;
+    animation-delay: var(--float-delay, 0ms);
+  }
+}
+
+/* 🎯 YENİ: Havada süzülme keyframe'i */
+@keyframes mapFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px); /* Yukarı doğru milimetrik süzülme */
+  }
+}
+
+@keyframes map-marker-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.65); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-marker { animation: none; }
+  .animate-map-float { animation: none; }
+}
