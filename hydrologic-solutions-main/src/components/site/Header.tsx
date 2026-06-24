@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { useLang } from "@/lib/i18n";
+import logoDark from "@/assets/KGSLOGO.png";
+import logoLight from "@/assets/KGS_w_logo.png";
 
 interface LinkItem {
   href: string;
@@ -41,16 +43,17 @@ export function Header() {
         {/* 1. TAM SOL TARAF: LOGO ALANI */}
         <a href="#home" className="group flex items-center transition-transform hover:scale-[1.02]">
           <span className="flex items-center justify-center">
-            <img 
-              src="/src/assets/KGSLOGO.png" 
-              alt="KGS" 
-              className="h-16 w-auto object-contain sm:h-20 md:h-24 lg:h-26 dark:hidden" 
-            />
-            <img 
-              src="/src/assets/KGS_w_logo.png" 
-              alt="KGS" 
-              className="hidden h-16 w-auto object-contain sm:h-20 md:h-24 lg:h-26 dark:block" 
-            />
+          <img
+  src={logoDark}
+  alt="KGS"
+  className="h-16 w-auto object-contain sm:h-20 md:h-24 lg:h-26 dark:hidden"
+/>
+
+<img
+  src={logoLight}
+  alt="KGS"
+  className="hidden h-16 w-auto object-contain sm:h-20 md:h-24 lg:h-26 dark:block"
+/>
           </span>
         </a>
 

@@ -1,41 +1,47 @@
 import { useLang } from "@/lib/i18n"; // 🎯 Dil sistemi bağlandı
+import hmtLogo from "@/assets/HMT.png";
+import preusLogo from "@/assets/preusbw.png";
+import fonteviaLogo from "@/assets/Fontevia.jpeg";
+import hidrowellLogo from "@/assets/hidrowell.jpeg";
+import jetaLogo from "@/assets/jeta logo.jpg";
+import geodesLogo from "@/assets/GEODES1.jpeg";
 
 const references = [
   {
     category: "Akademik Danışmanlık",
     name: "Hacettepe Mineral Teknolojileri",
     url: "https://www.hmineral.com/",
-    logo: "/src/assets/HMT.png",
+    logo: hmtLogo,
   },
   {
     category: "Hidrojeolojik Etütler ve Maden Hidrojeolojisi",
     name: "PREUS Consulting",
     url: "https://www.preus.com.tr/",
-    logo: "/src/assets/preusbw.png",
+    logo: preusLogo,
   },
   {
     category: "Hidrojeolojik Etütler ve Maden Hidrojeolojisi",
     name: "Fontevia Danışmanlık ve Mühendislik",
     url: "https://fontevia.com/fontevia",
-    logo: "/src/assets/Fontevia.jpeg",
+    logo: fonteviaLogo,
   },
   {
     category: "Hidrojeolojik Etütler ve Maden Hidrojeolojisi",
     name: "Hidrowell Mühendislik",
     url: "https://www.hidrowell.com.tr/",
-    logo: "/src/assets/hidrowell.jpeg",
+    logo: hidrowellLogo,
   },
   {
     category: "Jeoteknik",
     name: "JETA Mühendislik",
     url: "https://jetamuhendislik.com/",
-    logo: "/src/assets/jeta logo.jpg",
+    logo: jetaLogo,
   },
   {
     category: "Sondaj ve Maden Arama",
     name: "GEODES Mühendislik & Danışmanlık",
     url: "http://www.geodes.com.tr",
-    logo: "/src/assets/GEODES1.jpeg",
+    logo: geodesLogo ,
   },
 ];
 
