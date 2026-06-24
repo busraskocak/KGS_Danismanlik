@@ -20,6 +20,12 @@ const references = [
     logo: "/src/assets/Fontevia.jpeg",
   },
   {
+    category: "Hidrojeolojik Etütler ve Maden Hidrojeolojisi",
+    name: "Hidrowell Mühendislik",
+    url: "https://www.hidrowell.com.tr/",
+    logo: "/src/assets/hidrowell.jpeg",
+  },
+  {
     category: "Jeoteknik",
     name: "JETA Mühendislik",
     url: "https://jetamuhendislik.com/",
