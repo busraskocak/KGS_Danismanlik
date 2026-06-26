@@ -151,15 +151,15 @@ export function Header() {
           <div className="mt-6 grid gap-4 border-t border-border/60 pt-4 text-xs text-muted-foreground sm:grid-cols-3">
             <div>
               <p className="uppercase tracking-widest font-semibold text-[10px]">{t("contact.email")}</p>
-              <p className="mt-0.5 text-foreground">info@kgs.com.tr</p>
+              <p className="mt-0.5 text-foreground">info@kgsdanismanlik.com.tr</p>
             </div>
             <div>
               <p className="uppercase tracking-widest font-semibold text-[10px]">{t("contact.phone")}</p>
-              <p className="mt-0.5 text-foreground">+90 312 000 00 00</p>
+              <p className="mt-0.5 text-foreground">+90 506 645 13 33</p>
             </div>
             <div>
               <p className="uppercase tracking-widest font-semibold text-[10px]">{t("contact.address")}</p>
-              <p className="mt-0.5 text-foreground">Çankaya, Ankara</p>
+              <p className="mt-0.5 text-foreground">Mustafa Kemal Mah. Dumlupınar Blv. No:274 SiSa Kule, Çankaya / Ankara</p>
             </div>
           </div>
         </nav>
