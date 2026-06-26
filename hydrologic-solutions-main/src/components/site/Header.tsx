@@ -3,7 +3,7 @@ import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { useLang } from "@/lib/i18n";
 import logoDark from "@/assets/KGSLOGO.png";
-import logoLight from "@/assets/KGSLOGO.png";
+import logoLight from "@/assets/kgsw_logo.png";
 
 interface LinkItem {
   href: string;
@@ -20,7 +20,7 @@ export function Header() {
     { href: "#home", label: t("nav.home") },
     { href: "#about", label: t("nav.about") },
     { href: "#services", label: t("nav.services") },
- { href: "#references", label: t("nav.projects") },
+    { href: "#references", label: t("nav.projects") },
     { href: "#coverage", label: t("nav.coverage") },
     { href: "#contact", label: t("nav.contact") },
   ];

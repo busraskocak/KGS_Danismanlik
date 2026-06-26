@@ -118,13 +118,23 @@ export function Services() {
               
               <h3 className="font-display text-2xl md:text-3xl">{s.title}</h3>
               
-              <p className="text-sm text-muted-foreground">{s.desc}</p>
+              <p className="text-base text-muted-foreground">{s.desc}</p>
 
               {/* 🛠️ HOVER DURUMUNDA AÇILAN MADDELER */}
               {s.features && (
-                <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-hover:grid-rows-[1fr] group-hover:opacity-100">
+                <div className="
+  grid
+  grid-rows-[1fr]
+  opacity-100
+  md:grid-rows-[0fr]
+  md:opacity-0
+  transition-all
+  duration-300
+  md:group-hover:grid-rows-[1fr]
+  md:group-hover:opacity-100
+">
                   <div className="overflow-hidden">
-                    <ul className="space-y-2 text-xs text-muted-foreground border-t border-border/50 pt-4 mt-2">
+                    <ul className="space-y-2 text-sm md:text-base text-muted-foreground border-t border-border/50 pt-4 mt-2">
                       {s.features.map((feature, fIndex) => (
                         <li key={fIndex} className="flex items-start gap-2">
                           <span className="text-aqua mt-0.5">✓</span>

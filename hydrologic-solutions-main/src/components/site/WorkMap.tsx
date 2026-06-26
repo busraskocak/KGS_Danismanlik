@@ -76,7 +76,7 @@ const getWorkDescription = (loc: { workKey: string; work: string }) => {
               <div className="relative flex flex-col items-center justify-center animate-map-float">
                 
                 {/* 📌 PİN NOKTASI */}
-                <span className="relative flex h-5 w-5 cursor-help items-center justify-center" tabIndex={0}>
+                <span className="relative flex h-5 w-5 items-center justify-center">
                   <span className="absolute h-full w-full animate-ping rounded-full bg-aqua opacity-50" />
                   <span className="relative h-2.5 w-2.5 rounded-full border border-black bg-aqua shadow-[0_0_15px_#00f2fe] transition-transform duration-300 group-hover:scale-130" />
                 </span>
