@@ -11,13 +11,25 @@ export const dict: Dict = {
   "nav.about": { tr: "Hakkımızda", en: "About" },
   "nav.services": { tr: "Hizmetlerimiz", en: "Services" },
   "nav.coverage": { tr: "Çalışmalarımız", en: "Our Work" },
-  "nav.projects": { tr: "Projeler", en: "Projects" },
+  "nav.projects": {
+  tr: "Çözüm Ortaklarımız",
+  en: "Our Partners",
+},
   "nav.contact": { tr: "Bize Ulaşın", en: "Contact" },
   "menu.title": { tr: "Menü", en: "Menu" },
   "contact.email": { tr: "E-posta", en: "Email" },
   "contact.phone": { tr: "Telefon", en: "Phone" },
   "contact.address": { tr: "Adres", en: "Address" },
-  "brand.tagline": { tr: "Hidrojeoloji Danışmanlık", en: "Hydrogeology Consulting" },
+  "contact.addressValue": {
+  tr: "Mustafa Kemal Mah. Dumlupınar Blv. No:274 SiSa Kule, Çankaya / Ankara",
+  en: "Mustafa Kemal Mah. Dumlupınar Blv. No:274 SiSa Kule, Çankaya / Ankara",
+  },
+  "contact.linkedin": {
+  tr: "LinkedIn",
+  en: "LinkedIn",
+},
+
+  "brand.tagline": { tr: "KGS Danışmanlık", en: "KGS Consulting" },
   // --- PROJECTS (ÇÖZÜM ORTAKLARIMIZ) ÇEVİRİLERİ ---
   "projects.badge": { tr: "ÇÖZÜM ORTAKLARIMIZ", en: "OUR SOLUTION PARTNERS" },
   "projects.cat1": { tr: "AR-GE Danışmanlık", en: "R&D Consultancy" },
@@ -27,7 +39,7 @@ export const dict: Dict = {
 
   // --- SERVICES (HİZMETLERİMİZ) ÇEVİRİLERİ ---
   "services.badge": { tr: "Hizmetlerimiz", en: "Our Services" },
-  "services.title": { tr: "Uzmanlık Alanlarımızın", en: "Areas of Expertise" },
+  "services.title": { tr: "Uzmanlık Alanlarımız", en: "Areas of Expertise" },
   
   // Hizmet 1: Hidrojeolojik Etüt & Değerlendirme
   "services.s1.title": { tr: "Hidrojeolojik Etüt & Değerlendirme", en: "Hydrogeological Survey & Evaluation" },

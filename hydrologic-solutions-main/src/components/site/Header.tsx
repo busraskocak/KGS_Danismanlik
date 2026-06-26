@@ -3,7 +3,7 @@ import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { useLang } from "@/lib/i18n";
 import logoDark from "@/assets/KGSLOGO.png";
-import logoLight from "@/assets/KGS_w_logo.png";
+import logoLight from "@/assets/KGSLOGO.png";
 
 interface LinkItem {
   href: string;
@@ -20,6 +20,7 @@ export function Header() {
     { href: "#home", label: t("nav.home") },
     { href: "#about", label: t("nav.about") },
     { href: "#services", label: t("nav.services") },
+ { href: "#references", label: t("nav.projects") },
     { href: "#coverage", label: t("nav.coverage") },
     { href: "#contact", label: t("nav.contact") },
   ];
@@ -66,7 +67,7 @@ export function Header() {
               <a
                 key={l.href}
                 href={l.href}
-                className="text-sm font-medium text-muted-foreground/80 tracking-wide transition-all hover:text-foreground hover:translate-y-[-1px] whitespace-nowrap"
+               className="text-base font-semibold text-muted-foreground/80 tracking-wide transition-all hover:text-foreground hover:translate-y-[-1px] whitespace-nowrap"
               >
                 {l.label}
               </a>
@@ -81,7 +82,7 @@ export function Header() {
               <button
                 onClick={() => setLangDropdownOpen(!langDropdownOpen)}
                 onBlur={() => setTimeout(() => setLangDropdownOpen(false), 200)}
-                className="inline-flex h-10 items-center gap-1.5 rounded-full border border-border bg-surface/40 px-3.5 text-xs font-semibold uppercase tracking-wider backdrop-blur-md transition-all hover:bg-accent hover:text-accent-foreground"
+               className="inline-flex h-11 items-center gap-2 rounded-full border border-border bg-surface/40 px-4 text-sm font-semibold uppercase tracking-wider backdrop-blur-md transition-all hover:bg-accent hover:text-accent-foreground"
               >
                 <Globe className="h-3.5 w-3.5 text-muted-foreground" />
                 <span>{lang}</span>
@@ -92,7 +93,7 @@ export function Header() {
                 <div className="absolute right-0 mt-2 w-24 origin-top-right rounded-xl border border-border bg-background/95 p-1 shadow-lg backdrop-blur-xl animate-in fade-in slide-in-from-top-2 duration-200">
                   <button
                     onClick={() => setLang("tr")}
-                    className={`flex w-full items-center justify-center rounded-lg py-2 text-xs font-medium transition-colors ${
+                    className={`flex w-full items-center justify-center rounded-lg py-2 text-sm font-medium transition-colors ${
                       lang === "tr" ? "bg-primary text-primary-foreground" : "hover:bg-accent"
                     }`}
                   >
@@ -100,7 +101,7 @@ export function Header() {
                   </button>
                   <button
                     onClick={() => setLang("en")}
-                    className={`flex w-full items-center justify-center rounded-lg py-2 text-xs font-medium transition-colors ${
+                    className={`flex w-full items-center justify-center rounded-lg py-2 text-sm font-medium transition-colors ${
                       lang === "en" ? "bg-primary text-primary-foreground" : "hover:bg-accent"
                     }`}
                   >

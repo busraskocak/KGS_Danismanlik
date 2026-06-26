@@ -65,7 +65,7 @@ export function Projects() {
             <h3 className="w-full text-center text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/80 border-b border-border/60 pb-3 mb-6">
               {t("projects.cat1")} {/* 🎯 Çevrildi */}
             </h3>
-            <div className="w-full max-w-xs flex flex-col gap-4 items-center">
+          <div className="w-full flex justify-center">
               {references
                 .filter((ref) => ref.category === "Akademik Danışmanlık")
                 .map((ref) => (
@@ -74,7 +74,7 @@ export function Projects() {
                     href={ref.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group w-full flex flex-col justify-between rounded-xl border border-border bg-surface/40 p-4 transition-all hover:border-aqua/55 hover:bg-surface text-center"
+                  className="group w-full max-w-xs flex flex-col justify-between rounded-xl border border-border bg-surface/40 p-4 transition-all hover:border-aqua/55 hover:bg-surface text-center"
                   >
                     <div className="flex h-24 w-full items-center justify-center rounded-lg bg-foreground/[0.02] p-3 transition-colors group-hover:bg-foreground/[0.05]">
                       <img
@@ -96,46 +96,43 @@ export function Projects() {
           </div>
 
           {/* 2. KATEGORİ: Hidrojeolojik Etütler ve Maden Hidrojeolojisi */}
-          <div className="w-full flex flex-col items-center">
-            <h3 className="w-full text-center text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/80 border-b border-border/60 pb-3 mb-6">
-              {t("projects.cat2")} {/* 🎯 Çevrildi */}
-            </h3>
-            <div className="w-full max-w-xs flex flex-col gap-4 items-center">
-              {references
-                .filter((ref) => ref.category === "Hidrojeolojik Etütler ve Maden Hidrojeolojisi")
-                .map((ref) => (
-                  <a
-                    key={ref.name}
-                    href={ref.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group w-full flex flex-col justify-between rounded-xl border border-border bg-surface/40 p-4 transition-all hover:border-aqua/55 hover:bg-surface text-center"
-                  >
-                    <div className="flex h-24 w-full items-center justify-center rounded-lg bg-foreground/[0.02] p-3 transition-colors group-hover:bg-foreground/[0.05]">
-                      <img
-                        src={ref.logo}
-                        alt={`${ref.name} Logo`}
-                        className="max-h-full max-w-full object-contain filter grayscale transition-all duration-300 group-hover:grayscale-0 scale-100 group-hover:scale-105"
-                        onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                      />
-                    </div>
-                    <div className="mt-4 flex items-center justify-center gap-2">
-                      <span className="font-display text-base leading-snug text-card-foreground group-hover:text-aqua transition-colors line-clamp-2">
-                        {ref.name}
-                      </span>
-                      <span className="text-lg text-aqua transition-transform group-hover:translate-x-1 shrink-0">→</span>
-                    </div>
-                  </a>
-                ))}
-            </div>
-          </div>
+         <div className="grid w-full max-w-3xl gap-6 md:grid-cols-2 mx-auto">
+  {references
+    .filter((ref) => ref.category === "Hidrojeolojik Etütler ve Maden Hidrojeolojisi")
+    .map((ref, index) => (
+      <a
+        key={ref.name}
+        href={ref.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`group flex flex-col justify-between rounded-xl border border-border bg-surface/40 p-4 transition-all hover:border-aqua/55 hover:bg-surface text-center ${
+          index === 2 ? "md:col-span-2 justify-self-center w-full max-w-xs" : ""
+        }`}
+      >
+        <div className="flex h-24 w-full items-center justify-center rounded-lg bg-foreground/[0.02] p-3 transition-colors group-hover:bg-foreground/[0.05]">
+          <img
+            src={ref.logo}
+            alt={`${ref.name} Logo`}
+            className="max-h-full max-w-full object-contain filter grayscale transition-all duration-300 group-hover:grayscale-0 scale-100 group-hover:scale-105"
+          />
+        </div>
+
+        <div className="mt-4 flex items-center justify-center gap-2">
+          <span className="font-display text-base leading-snug text-card-foreground group-hover:text-aqua transition-colors line-clamp-2">
+            {ref.name}
+          </span>
+          <span className="text-lg text-aqua transition-transform group-hover:translate-x-1 shrink-0">→</span>
+        </div>
+      </a>
+    ))}
+</div>
 
           {/* 3. KATEGORİ: Jeoteknik */}
           <div className="w-full flex flex-col items-center">
             <h3 className="w-full text-center text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/80 border-b border-border/60 pb-3 mb-6">
               {t("projects.cat3")} {/* 🎯 Çevrildi */}
             </h3>
-            <div className="w-full max-w-xs flex flex-col gap-4 items-center">
+            <div className="w-full flex justify-center">
               {references
                 .filter((ref) => ref.category === "Jeoteknik")
                 .map((ref) => (
@@ -144,7 +141,7 @@ export function Projects() {
                     href={ref.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group w-full flex flex-col justify-between rounded-xl border border-border bg-surface/40 p-4 transition-all hover:border-aqua/55 hover:bg-surface text-center"
+                    className="group w-full max-w-xs flex flex-col justify-between rounded-xl border border-border bg-surface/40 p-4 transition-all hover:border-aqua/55 hover:bg-surface text-center"
                   >
                     <div className="flex h-24 w-full items-center justify-center rounded-lg bg-foreground/[0.02] p-3 transition-colors group-hover:bg-foreground/[0.05]">
                       <img
@@ -170,7 +167,7 @@ export function Projects() {
             <h3 className="w-full text-center text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/80 border-b border-border/60 pb-3 mb-6">
               {t("projects.cat4")} {/* 🎯 Çevrildi */}
             </h3>
-            <div className="w-full max-w-xs flex flex-col gap-4 items-center">
+            <div className="w-full flex justify-center">
               {references
                 .filter((ref) => ref.category === "Sondaj ve Maden Arama")
                 .map((ref) => (
@@ -179,7 +176,7 @@ export function Projects() {
                     href={ref.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group w-full flex flex-col justify-between rounded-xl border border-border bg-surface/40 p-4 transition-all hover:border-aqua/55 hover:bg-surface text-center"
+                  className="group w-full max-w-xs flex flex-col justify-between rounded-xl border border-border bg-surface/40 p-4 transition-all hover:border-aqua/55 hover:bg-surface text-center"
                   >
                     <div className="flex h-24 w-full items-center justify-center rounded-lg bg-foreground/[0.02] p-3 transition-colors group-hover:bg-foreground/[0.05]">
                       <img

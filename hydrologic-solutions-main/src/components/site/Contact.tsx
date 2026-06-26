@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
-import { useLang } from "@/lib/i18n"; // 🎯 Dil sistemini import ettik
+import { useLang } from "@/lib/i18n"; 
 
 export function Contact() {
   const { t } = useLang(); // 🎯 t fonksiyonunu çağırdık
@@ -9,27 +9,27 @@ export function Contact() {
     { 
       Icon: Mail, 
       label: t("contact.email"), 
-      value: "info@akifer.com.tr", 
-      href: "mailto:info@akifer.com.tr" 
+      value: "info@kgsdanismanlik.com.tr", 
+      href: "mailto:info@kgsdanismanlik.com.tr" 
     },
     { 
       Icon: Phone, 
       label: t("contact.phone"), 
-      value: "+90 312 000 00 00", 
-      href: "tel:+903120000000" 
+      value: "+90 506 645 13 33", 
+      href: "tel:+905066451333" 
     },
     { 
       Icon: MapPin, 
       label: t("contact.address"), 
-      value: t("contact.addressValue"), // 🎯 Tam adres metni dille birlikte değişir
+      value: t("contact.addressValue"), 
       href: undefined 
     },
-    { 
-      Icon: Linkedin, 
-      label: t("contact.linkedin"), 
-      value: "linkedin.com/company/Kgs", 
-      href: "#" 
-    },
+   {
+  Icon: Linkedin,
+  label: t("contact.linkedin"),
+  value: "KGS Danışmanlık ve Mühendislik",
+  href: "https://www.linkedin.com/company/kgsconsulting/posts/?feedView=all",
+},
   ];
 
   return (

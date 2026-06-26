@@ -11,13 +11,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Akifer — Hidrojeoloji Mühendisliği Danışmanlığı" },
+      { title: "KGS Danışmalık ve Mühendislik" },
       {
         name: "description",
         content:
-          "Akifer, hidrojeolojik etüt, yeraltı suyu modellemesi ve sürdürülebilir kaynak yönetimi konularında bağımsız danışmanlık veren bir mühendislik firmasıdır.",
+          "Hidrojeolojik etüt, yeraltı suyu modellemesi ve sürdürülebilir kaynak yönetimi konularında bağımsız danışmanlık veren bir mühendislik firmasıdır.",
       },
-      { property: "og:title", content: "Akifer — Hidrojeoloji Mühendisliği Danışmanlığı" },
+      { property: "og:title", content: "KGS Danışmalık ve Mühendislik" },
       {
         property: "og:description",
         content: "Hidrojeolojik etüt, akifer testleri, yeraltı suyu modellemesi ve ÇED raporları.",
@@ -35,8 +35,8 @@ function Index() {
         <Hero />
         <About />
         <Services />
-        <WorkMap />
         <Projects />
+        <WorkMap />
         <Contact />
       </main>
       <Footer />

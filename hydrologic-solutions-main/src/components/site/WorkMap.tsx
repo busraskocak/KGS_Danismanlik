@@ -80,25 +80,10 @@ const getWorkDescription = (loc: { workKey: string; work: string }) => {
                   <span className="absolute h-full w-full animate-ping rounded-full bg-aqua opacity-50" />
                   <span className="relative h-2.5 w-2.5 rounded-full border border-black bg-aqua shadow-[0_0_15px_#00f2fe] transition-transform duration-300 group-hover:scale-130" />
                 </span>
-
-                {/* 💬 TOOLTIP KUTUSU */}
-                <div className="pointer-events-none absolute bottom-full left-1/2 z-30 mb-4 w-max max-w-60 -translate-x-1/2 translate-y-2 rounded-xl border border-aqua/40 bg-slate-950/95 p-3.5 text-center opacity-0 shadow-[0_12px_35px_-10px_rgba(0,242,254,0.5)] backdrop-blur-md transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                  
-                  <strong className="block font-display text-sm font-bold tracking-wide text-aqua uppercase mb-1">
-                    {location.city}
-                  </strong>
-                  
-                  <span className="block w-6 h-[1px] bg-white/10 mx-auto mb-2" />
-                  
-                  <span className="block text-xs font-medium text-slate-200 leading-relaxed">
-                    {getWorkDescription(location)}
-                  </span>
-                  
-                  <span className="absolute top-full left-1/2 -translate-x-1/2 border-6 border-transparent border-t-slate-950/95 w-0 h-0" />
                 </div>
 
               </div>
-            </div>
+            
           ))}
         </div>
       </div>
