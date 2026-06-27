@@ -16,6 +16,10 @@ export const dict: Dict = {
   en: "Our Partners",
 },
   "nav.contact": { tr: "Bize Ulaşın", en: "Contact" },
+  "contact.title": {
+  tr: "Bize Ulaşın",
+  en: "Contact",
+},
   "menu.title": { tr: "Menü", en: "Menu" },
   "contact.email": { tr: "E-posta", en: "Email" },
   "contact.phone": { tr: "Telefon", en: "Phone" },
@@ -32,7 +36,7 @@ export const dict: Dict = {
   "brand.tagline": { tr: "KGS Danışmanlık", en: "KGS Consulting" },
   // --- PROJECTS (ÇÖZÜM ORTAKLARIMIZ) ÇEVİRİLERİ ---
   "projects.badge": { tr: "ÇÖZÜM ORTAKLARIMIZ", en: "OUR SOLUTION PARTNERS" },
-  "projects.cat1": { tr: "AR-GE Danışmanlık", en: "R&D Consultancy" },
+  "projects.cat1": { tr: "AR-GE Danışmanlığı", en: "R&D Consultancy" },
   "projects.cat2": { tr: "Hidrojeolojik Etütler ve Maden Hidrojeolojisi", en: "Hydrogeological Surveys and Mine Hydrogeology" },
   "projects.cat3": { tr: "Jeoteknik", en: "Geotechnics" },
   "projects.cat4": { tr: "Sondaj ve Maden Arama", en: "Drilling and Mineral Exploration" },
@@ -129,7 +133,7 @@ export const dict: Dict = {
     en: "Our fields of activity;" 
   },
   "about.featuresContent": { 
-    tr: "hidrojeolojik etüt ve değerlendirme çalışmaları, havza bazlı hidrojeolojik analizler, yeraltısuyu akım ve kirletici taşınımının nümerik modellemesi, içme suyu kaynakları ile göl ve göletler için koruma alanlarının belirlenmesi, maden projelerinde susuzlaştırma ve yeraltısuyu yönetimi, tünel ve yol projeleri için hidrojeolojik değerlendirmeler, drenaj sistemlerinin tasarımı, çevresel etki değerlendirme süreçleri, hidrojeolojik risk analizleri ile Coğrafi Bilgi Sistemleri (CBS) tabanlı mekânsal analiz ve karar destek çalışmalarını kapsamaktadır. Bu kapsamda; hidrojeokimyasal analizler, izotop hidrolojisi, akifer testleri, boya izleme deneyleri ogü diğer ileri saha uygulamalarını gerçekleştirerek kapsamlı değerlendirme ve mühendislik danışmanlığı hizmetleri sunmaktayız.", 
+    tr: "hidrojeolojik etüt ve değerlendirme çalışmaları, havza bazlı hidrojeolojik analizler, yeraltısuyu akım ve kirletici taşınımının nümerik modellemesi, içme suyu kaynakları ile göl ve göletler için koruma alanlarının belirlenmesi, maden projelerinde susuzlaştırma ve yeraltısuyu yönetimi, tünel ve yol projeleri için hidrojeolojik değerlendirmeler, drenaj sistemlerinin tasarımı, çevresel etki değerlendirme süreçleri, hidrojeolojik risk analizleri ile Coğrafi Bilgi Sistemleri (CBS) tabanlı mekânsal analiz ve karar destek çalışmalarını kapsamaktadır. Bu kapsamda; hidrojeokimyasal analizler, izotop hidrolojisi, akifer testleri, boya izleme deneyleri  diğer ileri saha uygulamalarını gerçekleştirerek kapsamlı değerlendirme ve mühendislik danışmanlığı hizmetleri sunmaktayız.", 
     en: "include hydrogeological investigation and evaluation studies, basin-based hydrogeological analyses, numerical modeling of groundwater flow and contaminant transport, determination of protection zones for drinking water resources, lakes, and ponds, dewatering and groundwater management in mining projects, hydrogeological evaluations for tunnel and road projects, drainage system design, environmental impact assessment processes, hydrogeological risk analyses, and Geographic Information Systems (GIS) based spatial analysis and decision support studies. In this context, we provide comprehensive evaluation and engineering consultancy services by performing hydrogeochemical analyses, isotope hydrology, aquifer tests, dye tracing tests, and other advanced field applications." 
   },
   "about.principlesContent": { 
