@@ -11,7 +11,7 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "KGS Danışmalık ve Mühendislik" },
+      { title: "KGS Danışmanlık ve Mühendislik" },
       {
         name: "description",
         content:
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "KGS Danışmalık ve Mühendislik" },
       {
         property: "og:description",
-        content: "Hidrojeolojik etüt, akifer testleri, yeraltı suyu modellemesi ve ÇED raporları.",
+        content: "Hidrojeolojik Etüt Raporları, Maden Hidrojeolojisi, Yeraltısuyu Nümerik Modellemesi ve CBS Uygulamaları.",
       },
     ],
   }),
