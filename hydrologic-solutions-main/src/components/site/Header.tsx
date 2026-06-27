@@ -81,7 +81,7 @@ export function Header() {
             <div className="relative">
               <button
                 onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-                onBlur={() => setTimeout(() => setLangDropdownOpen(false), 200)}
+              
                className="inline-flex h-11 items-center gap-2 rounded-full border border-border bg-surface/40 px-4 text-sm font-semibold uppercase tracking-wider backdrop-blur-md transition-all hover:bg-accent hover:text-accent-foreground"
               >
                 <Globe className="h-3.5 w-3.5 text-muted-foreground" />
@@ -101,6 +101,7 @@ export function Header() {
                   </button>
                   <button
                     onClick={() => setLang("en")}
+                    
                     className={`flex w-full items-center justify-center rounded-lg py-2 text-sm font-medium transition-colors ${
                       lang === "en" ? "bg-primary text-primary-foreground" : "hover:bg-accent"
                     }`}
@@ -159,7 +160,7 @@ export function Header() {
             </div>
             <div>
               <p className="uppercase tracking-widest font-semibold text-[10px]">{t("contact.address")}</p>
-              <p className="mt-0.5 text-foreground">Mustafa Kemal Mah. Dumlupınar Blv. No:274 SiSa Kule, Çankaya / Ankara</p>
+              <p className="mt-0.5 text-foreground">Konutkent Mahallesi, Dumlupınar Bulvarı No:381AK Çankaya/ANKARA</p>
             </div>
           </div>
         </nav>

@@ -1,10 +1,10 @@
-import { useLang } from "@/lib/i18n"; // 🎯 Dil sistemi bağlandı
+import { useLang } from "@/lib/i18n";
 import hmtLogo from "@/assets/HMT.png";
 import preusLogo from "@/assets/preusbw.png";
-import fonteviaLogo from "@/assets/Fontevia.jpeg";
-import hidrowellLogo from "@/assets/hidrowell.jpeg";
-import jetaLogo from "@/assets/jeta logo.jpg";
-import geodesLogo from "@/assets/GEODES1.jpeg";
+import fonteviaLogo from "@/assets/Fontevia.png";
+import hidrowellLogo from "@/assets/hidrowell.png";
+import jetaLogo from "@/assets/Jeta.png";
+import geodesLogo from "@/assets/GEODES1.png";
 
 const references = [
   {
@@ -12,6 +12,7 @@ const references = [
     name: "Hacettepe Mineral Teknolojileri",
     url: "https://www.hmineral.com/",
     logo: hmtLogo,
+    
   },
   {
     category: "Hidrojeolojik Etütler ve Maden Hidrojeolojisi",
@@ -41,169 +42,115 @@ const references = [
     category: "Sondaj ve Maden Arama",
     name: "GEODES Mühendislik & Danışmanlık",
     url: "http://www.geodes.com.tr",
-    logo: geodesLogo ,
+    logo: geodesLogo,
   },
 ];
 
+function PartnerCard({ refItem }: { refItem: (typeof references)[number] }) {
+  return (
+    <a
+      key={refItem.name}
+      href={refItem.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative flex w-full max-w-sm flex-col items-center overflow-hidden rounded-3xl border border-border/60 bg-surface/45 p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-aqua/60 hover:bg-surface hover:shadow-xl hover:shadow-aqua/15"
+    >
+      <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-aqua/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
+      <div className="flex h-32 w-32 items-center justify-center rounded-full border border-aqua/20 bg-white p-6 shadow-md shadow-black/5 transition-all duration-300 group-hover:scale-105 group-hover:border-aqua/50 group-hover:shadow-aqua/20">
+        <img
+          src={refItem.logo}
+          alt={refItem.name}
+          className="max-h-full max-w-full object-contain grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="mt-5 flex items-center justify-center gap-2">
+        <span className="font-display text-lg leading-snug text-card-foreground transition-colors group-hover:text-aqua md:text-xl">
+          {refItem.name}
+        </span>
+
+      </div>
+    </a>
+  );
+}
+
 export function Projects() {
-  const { t } = useLang(); // 🎯 t fonksiyonu çağrıldı
+  const { t } = useLang();
+
+  const academicRefs = references.filter(
+    (ref) => ref.category === "Akademik Danışmanlık"
+  );
+
+  const hydroRefs = references.filter(
+    (ref) =>
+      ref.category === "Hidrojeolojik Etütler ve Maden Hidrojeolojisi"
+  );
+
+  const geoRefs = references.filter((ref) => ref.category === "Jeoteknik");
+
+  const drillingRefs = references.filter(
+    (ref) => ref.category === "Sondaj ve Maden Arama"
+  );
 
   return (
     <section id="references" className="relative py-24 md:py-36">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div>
           <p className="text-xs uppercase tracking-[0.25em] text-aqua">
-            {t("projects.badge")} {/* 🎯 Çevrildi */}
+            {t("projects.badge")}
           </p>
         </div>
 
-        {/* KATEGORİ SARMALAYICI (Tüm grupları alt alta ve ortalı dizer) */}
-        <div className="mt-16 space-y-12 w-full flex flex-col items-center">
-          
-          {/* 1. KATEGORİ: AR-GE Danışmanlık */}
-          <div className="w-full flex flex-col items-center">
-           <h3 className="w-full text-center text-sm md:text-base font-bold uppercase tracking-[0.2em] text-muted-foreground/80 border-b border-border/60 pb-3 mb-6">
-              {t("projects.cat1")} {/* 🎯 Çevrildi */}
+        <div className="mt-16 flex w-full flex-col items-center space-y-14">
+          {/* 1. KATEGORİ */}
+          <div className="flex w-full flex-col items-center">
+            <h3 className="mb-8 w-full border-b border-border/60 pb-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-muted-foreground/80 md:text-base">
+              {t("projects.cat1")}
             </h3>
-          <div className="w-full flex justify-center">
-              {references
-                .filter((ref) => ref.category === "Akademik Danışmanlık")
-                .map((ref) => (
-                  <a
-                    key={ref.name}
-                    href={ref.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  className="group w-full max-w-xs flex flex-col justify-between rounded-xl border border-border bg-surface/40 p-4 transition-all hover:border-aqua/55 hover:bg-surface text-center"
-                  >
-                    <div className="flex h-24 w-full items-center justify-center rounded-lg bg-foreground/[0.02] p-3 transition-colors group-hover:bg-foreground/[0.05]">
-                      <img
-                        src={ref.logo}
-                        alt={`${ref.name} Logo`}
-                        className="max-h-full max-w-full object-contain filter grayscale transition-all duration-300 group-hover:grayscale-0 scale-100 group-hover:scale-105"
-                        onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                      />
-                    </div>
-                    <div className="mt-4 flex items-center justify-center gap-2">
-                      <span className="font-display text-base leading-snug text-card-foreground group-hover:text-aqua transition-colors line-clamp-2">
-                        {ref.name}
-                      </span>
-                      <span className="text-lg text-aqua transition-transform group-hover:translate-x-1 shrink-0">→</span>
-                    </div>
-                  </a>
-                ))}
+
+            <div className="flex w-full justify-center">
+              {academicRefs.map((ref) => (
+                <PartnerCard key={ref.name} refItem={ref} />
+              ))}
             </div>
           </div>
 
-{/* 2. KATEGORİ: Hidrojeolojik Etütler ve Maden Hidrojeolojisi */}
-<div className="w-full flex flex-col items-center">
-  <h3 className="w-full text-center text-sm md:text-base font-bold uppercase tracking-[0.2em] text-muted-foreground/80 border-b border-border/60 pb-3 mb-6">
-    {t("projects.cat2")}
-  </h3>
-
-  <div className="grid w-full max-w-3xl gap-6 md:grid-cols-2 mx-auto">
-    {references
-      .filter((ref) => ref.category === "Hidrojeolojik Etütler ve Maden Hidrojeolojisi")
-      .map((ref, index) => (
-        <a
-          key={ref.name}
-          href={ref.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`group flex flex-col justify-between rounded-xl border border-border bg-surface/40 p-4 transition-all hover:border-aqua/55 hover:bg-surface text-center ${
-            index === 2 ? "md:col-span-2 justify-self-center w-full max-w-xs" : ""
-          }`}
-        >
-          <div className="flex h-24 w-full items-center justify-center rounded-lg bg-foreground/[0.02] p-3 transition-colors group-hover:bg-foreground/[0.05]">
-            <img
-              src={ref.logo}
-              alt={`${ref.name} Logo`}
-              className="max-h-full max-w-full object-contain filter grayscale transition-all duration-300 group-hover:grayscale-0 scale-100 group-hover:scale-105"
-            />
-          </div>
-
-          <div className="mt-4 flex items-center justify-center gap-2">
-            <span className="font-display text-lg md:text-xl leading-snug text-card-foreground group-hover:text-aqua transition-colors line-clamp-2">
-              {ref.name}
-            </span>
-            <span className="text-xl text-aqua transition-transform group-hover:translate-x-1 shrink-0">→</span>
-          </div>
-        </a>
-      ))}
-  </div>
-</div>
-
-
-          {/* 3. KATEGORİ: Jeoteknik */}
-          <div className="w-full flex flex-col items-center">
-           <h3 className="w-full text-center text-sm md:text-base font-bold uppercase tracking-[0.2em] text-muted-foreground/80 border-b border-border/60 pb-3 mb-6">
-              {t("projects.cat3")} {/* 🎯 Çevrildi */}
+          {/* 2. KATEGORİ */}
+          <div className="flex w-full flex-col items-center">
+            <h3 className="mb-8 w-full border-b border-border/60 pb-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-muted-foreground/80 md:text-base">
+              {t("projects.cat2")}
             </h3>
-            <div className="w-full flex justify-center">
-              {references
-                .filter((ref) => ref.category === "Jeoteknik")
-                .map((ref) => (
-                  <a
-                    key={ref.name}
-                    href={ref.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group w-full max-w-xs flex flex-col justify-between rounded-xl border border-border bg-surface/40 p-4 transition-all hover:border-aqua/55 hover:bg-surface text-center"
-                  >
-                    <div className="flex h-24 w-full items-center justify-center rounded-lg bg-foreground/[0.02] p-3 transition-colors group-hover:bg-foreground/[0.05]">
-                      <img
-                        src={ref.logo}
-                        alt={`${ref.name} Logo`}
-                        className="max-h-full max-w-full object-contain filter grayscale transition-all duration-300 group-hover:grayscale-0 scale-100 group-hover:scale-105"
-                        onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                      />
-                    </div>
-                    <div className="mt-4 flex items-center justify-center gap-2">
-                      <span className="font-display text-base leading-snug text-card-foreground group-hover:text-aqua transition-colors line-clamp-2">
-                        {ref.name}
-                      </span>
-                      <span className="text-lg text-aqua transition-transform group-hover:translate-x-1 shrink-0">→</span>
-                    </div>
-                  </a>
-                ))}
+
+            <div className="mx-auto grid w-full max-w-5xl gap-8 md:grid-cols-3">
+              {hydroRefs.map((ref) => (
+                <PartnerCard key={ref.name} refItem={ref} />
+              ))}
             </div>
           </div>
 
-          {/* 4. KATEGORİ: Sondaj ve Maden Arama */}
-          <div className="w-full flex flex-col items-center">
-           <h3 className="w-full text-center text-sm md:text-base font-bold uppercase tracking-[0.2em] text-muted-foreground/80 border-b border-border/60 pb-3 mb-6">
-              {t("projects.cat4")} {/* 🎯 Çevrildi */}
-            </h3>
-            <div className="w-full flex justify-center">
-              {references
-                .filter((ref) => ref.category === "Sondaj ve Maden Arama")
-                .map((ref) => (
-                  <a
-                    key={ref.name}
-                    href={ref.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  className="group w-full max-w-xs flex flex-col justify-between rounded-xl border border-border bg-surface/40 p-4 transition-all hover:border-aqua/55 hover:bg-surface text-center"
-                  >
-                    <div className="flex h-24 w-full items-center justify-center rounded-lg bg-foreground/[0.02] p-3 transition-colors group-hover:bg-foreground/[0.05]">
-                      <img
-                        src={ref.logo}
-                        alt={`${ref.name} Logo`}
-                        className="max-h-full max-w-full object-contain filter grayscale transition-all duration-300 group-hover:grayscale-0 scale-100 group-hover:scale-105"
-                        onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                      />
-                    </div>
-                    <div className="mt-4 flex items-center justify-center gap-2">
-                      <span className="font-display text-base leading-snug text-card-foreground group-hover:text-aqua transition-colors line-clamp-2">
-                        {ref.name}
-                      </span>
-                      <span className="text-lg text-aqua transition-transform group-hover:translate-x-1 shrink-0">→</span>
-                    </div>
-                  </a>
-                ))}
+          {/* 3-4. KATEGORİ */}
+          <div className="grid w-full max-w-5xl gap-10 md:grid-cols-2">
+            <div className="flex flex-col items-center">
+              <h3 className="mb-8 w-full border-b border-border/60 pb-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-muted-foreground/80 md:text-base">
+                {t("projects.cat3")}
+              </h3>
+
+              {geoRefs.map((ref) => (
+                <PartnerCard key={ref.name} refItem={ref} />
+              ))}
+            </div>
+
+            <div className="flex flex-col items-center">
+              <h3 className="mb-8 w-full border-b border-border/60 pb-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-muted-foreground/80 md:text-base">
+                {t("projects.cat4")}
+              </h3>
+
+              {drillingRefs.map((ref) => (
+                <PartnerCard key={ref.name} refItem={ref} />
+              ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>

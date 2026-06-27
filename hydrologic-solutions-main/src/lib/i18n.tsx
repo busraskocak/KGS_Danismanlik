@@ -21,8 +21,8 @@ export const dict: Dict = {
   "contact.phone": { tr: "Telefon", en: "Phone" },
   "contact.address": { tr: "Adres", en: "Address" },
   "contact.addressValue": {
-  tr: "Mustafa Kemal Mah. Dumlupınar Blv. No:274 SiSa Kule, Çankaya / Ankara",
-  en: "Mustafa Kemal Mah. Dumlupınar Blv. No:274 SiSa Kule, Çankaya / Ankara",
+  tr: "Konutkent Mahallesi, Dumlupınar Bulvarı No:381AK Çankaya/ANKARA",
+  en: "Konutkent Mahallesi, Dumlupınar Bulvarı No:381AK Çankaya/ANKARA",
   },
   "contact.linkedin": {
   tr: "LinkedIn",
@@ -64,7 +64,7 @@ export const dict: Dict = {
   "services.s2.f5": { tr: "Karar destek modellemeleri", en: "Decision support modeling" },
 
   // Hizmet 3: Madencilik Hidrojeolojisi
-  "services.s3.title": { tr: "Madencilik Hidrojeolojisi", en: "Mining Hydrogeology" },
+  "services.s3.title": { tr: "Maden Hidrojeolojisi", en: "Mine Hydrogeology" },
   "services.s3.desc": { tr: "Madencilik, tünel vb. projelerde yeraltısuyunun güvenli ve sürdürülebilir yönetimine yönelik mühendislik çözümleri sunuyoruz.", en: "We offer engineering solutions for the safe and sustainable management of groundwater in mining, tunneling, and similar infrastructure projects." },
   "services.s3.f1": { tr: "Maden susuzlaştırma (Dewatering) tasarımı", en: "Mine dewatering system design" },
   "services.s3.f2": { tr: "ÇED kapsamında hidrojeolojik değerlendirmeler", en: "Hydrogeological assessments within the scope of EIA" },
