@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
         content:
           "Hidrojeolojik Etüt Raporları, Maden Hidrojeolojisi, Yeraltısuyu Nümerik Modellemesi ve CBS Uygulamaları.",
       },
-      { property: "og:title", content: "KGS Danışmalık ve Mühendislik" },
+      { property: "og:title", content: "KGS Danışmanlık ve Mühendislik" },
       {
         property: "og:description",
         content: "Hidrojeolojik Etüt Raporları, Maden Hidrojeolojisi, Yeraltısuyu Nümerik Modellemesi ve CBS Uygulamaları.",
