@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Hidrojeolojik etüt, yeraltı suyu modellemesi ve sürdürülebilir kaynak yönetimi konularında bağımsız danışmanlık veren bir mühendislik firmasıdır.",
+          "Hidrojeolojik Etüt Raporları, Maden Hidrojeolojisi, Yeraltısuyu Nümerik Modellemesi ve CBS Uygulamaları.",
       },
       { property: "og:title", content: "KGS Danışmalık ve Mühendislik" },
       {

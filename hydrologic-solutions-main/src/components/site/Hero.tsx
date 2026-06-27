@@ -109,7 +109,7 @@ export function Hero() {
             <h3 className="font-display text-xl text-foreground md:text-2xl">
               {lang === "tr"
                 ? "Ulusal ve Uluslararası Standartlarda Raporlama"
-                : "Reporting to National and International Standards"}
+                : "National & International Standards Compliant Reports"}
             </h3>
          
           </div>
