@@ -41,6 +41,19 @@ export const dict: Dict = {
   "projects.cat3": { tr: "Jeoteknik", en: "Geotechnics" },
   "projects.cat4": { tr: "Sondaj ve Maden Arama", en: "Drilling and Mineral Exploration" },
 
+  "missionVision.badge": { tr: "Kurumsal Yaklaşım", en: "Corporate Approach" },
+  "missionVision.title": { tr: "Misyonumuz & Vizyonumuz", en: "Our Mission & Vision" },
+  "missionVision.missionTitle": { tr: "Misyonumuz", en: "Our Mission" },
+  "missionVision.missionText": {
+    tr: "Çevresel ve sürdürülebilirlik odaklı çalışmalarda, yeraltı suyu yönetimi ve planlaması alanında uluslararası standartlar doğrultusunda faaliyet göstererek, ekosistemin korunmasını ve insan sağlığını önceliklendiren, mühendislik etiği ile bilimsel ve teknik ilkelerden ödün vermeyen, yenilikçi ve güvenilir danışmanlık hizmetleri sunmaktır.",
+    en: "To provide innovative and reliable consultancy services in environmental and sustainability-oriented studies, operating in line with international standards in groundwater management and planning, prioritizing ecosystem protection and human health, and upholding engineering ethics as well as scientific and technical principles.",
+  },
+  "missionVision.visionTitle": { tr: "Vizyonumuz", en: "Our Vision" },
+  "missionVision.visionText": {
+    tr: "Çevresel etki değerlendirme ve sürdürülebilirlik alanlarında iş birliğini, bilgi paylaşımını ve bilimsel gelişimi teşvik eden öncü bir anlayış oluşturarak, ulusal ve uluslararası ölçekte tercih edilen, güvenilir ve sektörüne yön veren küresel bir çözüm ortağı olmaktır.",
+    en: "To become a trusted, sector-leading global solution partner preferred on a national and international scale by fostering collaboration, knowledge sharing and scientific development in environmental impact assessment and sustainability.",
+  },
+
   // --- SERVICES (HİZMETLERİMİZ) ÇEVİRİLERİ ---
   "services.badge": { tr: "Hizmetlerimiz", en: "Our Services" },
   "services.title": { tr: "Uzmanlık Alanlarımız", en: "Areas of Expertise" },
