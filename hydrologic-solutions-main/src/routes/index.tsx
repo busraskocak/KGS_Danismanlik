@@ -7,6 +7,7 @@ import { WorkMap } from "@/components/site/WorkMap";
 import { Projects } from "@/components/site/Projects";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
+import { MissionVision } from "@/components/site/MissionVision";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,6 +35,7 @@ function Index() {
       <main>
         <Hero />
         <About />
+        <MissionVision />
         <Services />
         <Projects />
         <WorkMap />
