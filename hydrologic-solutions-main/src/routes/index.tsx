@@ -28,9 +28,41 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "KGS Danışmanlık ve Mühendislik",
+  description:
+    "Hidrojeolojik Etüt Raporları, Maden Hidrojeolojisi, Yeraltısuyu Nümerik Modellemesi ve CBS Uygulamaları.",
+  url: "https://kgsdanismanlik.com.tr/",
+  email: "info@kgsdanismanlik.com.tr",
+  telephone: "+905066451333",
+    areaServed: "Turkey",
+
+  serviceType: [
+    "Hidrojeolojik Etüt",
+    "Yeraltısuyu Modelleme",
+    "Maden Hidrojeolojisi",
+    "Su Kaynakları Koruma Alanı Çalışmaları",
+    "CBS Uygulamaları"
+  ],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Konutkent Mahallesi, Dumlupınar Bulvarı No:381AK",
+    addressLocality: "Çankaya/Ankara",
+    addressCountry: "TR",
+  },
+  sameAs: ["https://www.linkedin.com/company/kgsconsulting/posts/?feedView=all"],
+};
+
+
 function Index() {
   return (
     <div className="relative min-h-screen bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />  
       <Header />
       <main>
         <Hero />

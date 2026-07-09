@@ -73,17 +73,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+     { title: "KGS Danışmanlık ve Mühendislik" },
+      {
+        name: "description",
+        content:
+          "Hidrojeolojik Etüt Raporları, Maden Hidrojeolojisi, Yeraltısuyu Nümerik Modellemesi ve CBS Uygulamaları.",
+      },
+      { name: "author", content: "KGS Danışmanlık ve Mühendislik" },
+      { name: "robots", content: "index, follow" },
+      { property: "og:title", content: "KGS Danışmanlık ve Mühendislik" },
+      {
+        property: "og:description",
+        content:
+          "Hidrojeolojik Etüt Raporları, Maden Hidrojeolojisi, Yeraltısuyu Nümerik Modellemesi ve CBS Uygulamaları.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:locale", content: "tr_TR" },
+      { property: "og:site_name", content: "KGS Danışmanlık ve Mühendislik" },
+      { property: "og:url", content: "https://kgsdanismanlik.com.tr/" },
     ],
     links: [
       { rel: "icon", href: "/favicon.ico" },
+       { rel: "canonical", href: "https://kgsdanismanlik.com.tr/" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
