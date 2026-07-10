@@ -35,6 +35,7 @@ const structuredData = {
   description:
     "Hidrojeolojik Etüt Raporları, Maden Hidrojeolojisi, Yeraltısuyu Nümerik Modellemesi ve CBS Uygulamaları.",
   url: "https://kgsdanismanlik.com.tr/",
+   logo: "https://kgsdanismanlik.com.tr/logo.png",
   email: "info@kgsdanismanlik.com.tr",
   telephone: "+905066451333",
     areaServed: "Turkey",
