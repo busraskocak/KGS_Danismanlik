@@ -18,10 +18,7 @@ export function MissionVision() {
 
         <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2">
           <div className="group relative flex flex-col gap-6 bg-background p-8 transition-colors hover:bg-card md:p-10">
-            <span className="font-display text-xs text-muted-foreground">
-              /01
-            </span>
-
+           
             <h3 className="font-display text-2xl md:text-3xl">
               {t("missionVision.missionTitle")}
             </h3>
@@ -34,9 +31,7 @@ export function MissionVision() {
           </div>
 
           <div className="group relative flex flex-col gap-6 bg-background p-8 transition-colors hover:bg-card md:p-10">
-            <span className="font-display text-xs text-muted-foreground">
-              /02
-            </span>
+           
 
             <h3 className="font-display text-2xl md:text-3xl">
               {t("missionVision.visionTitle")}
